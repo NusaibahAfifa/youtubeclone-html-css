@@ -1,0 +1,126 @@
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.nail {
+  width: 100%;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.propic {
+  width: 36px;
+  border-radius: 20px;
+}
+
+.nail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-time {
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  color: white;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 4px;
+  /*padding: 4px 5px; first value is top-bottom second is left-right*/
+  /*padding: 1px 2px 3px 4px; top right bottom left*/
+  /* also works for margin */
+}
+
+.author,
+.stat {
+  font-size: 13px;
+  color: rgb(96, 96, 96);
+}
+
+.author {
+  margin-bottom: 4px;
+}
+
+.profile-info {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  background-color: white;
+  height: 80px;
+  width: 230px;
+  position: relative;
+  z-index: 90;
+  border-radius: 6px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.288);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.info-propic {
+  height: 55px;
+  border-radius: 30px;
+  margin: 0 8px;
+}
+
+.creater-name {
+  font-weight: bold;
+}
+
+.sub-count {
+  color: rgb(77, 77, 77);
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.profile-picture-container {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.profile-picture-container:hover .profile-info {
+  opacity: 1;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+  /*text-decoration: underline; inheritence affects text property*/
+  /*border: 2px solid red; doesn't affects border, padding, margin*/
+}
+
+@media (max-width: 870px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*in this case it works without this block of code */
+@media (min-width: 871px) and (max-width: 1124) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1125px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
